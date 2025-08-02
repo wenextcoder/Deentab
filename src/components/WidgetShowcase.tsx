@@ -2,9 +2,19 @@ import React, { useEffect, useState } from 'react';
 import DraggableButton from './DraggableButton';
 
 const widgets = [
-  'Todo List', 'Digital Clock', 'Prayer Times', 'Greeting',
-  'Task Box', 'Time Tracker', 'Quick Notes', 'Calendar',
-  'Pomodoro', 'Quote', 'User Preferences', 'Reset Canvas', 'Request Features'
+  { name: 'Todo List', icon: '📝' },
+  { name: 'Digital Clock', icon: '🕐' },
+  { name: 'Prayer Times', icon: '🕌' },
+  { name: 'Greeting', icon: '👋' },
+  { name: 'Task Box', icon: '📋' },
+  { name: 'Time Tracker', icon: '⏱️' },
+  { name: 'Quick Notes', icon: '📄' },
+  { name: 'Calendar', icon: '📅' },
+  { name: 'Pomodoro', icon: '🍅' },
+  { name: 'Quote', icon: '💭' },
+  { name: 'User Preferences', icon: '⚙️' },
+  { name: 'Reset Canvas', icon: '🔄' },
+  { name: 'Request Features', icon: '💡' }
 ];
 
 const WidgetShowcase = () => {
@@ -15,7 +25,7 @@ const WidgetShowcase = () => {
       widgets.forEach((_, index) => {
         setTimeout(() => {
           setVisibleWidgets(prev => [...prev, index]);
-        }, index * 150);
+        }, index * 100);
       });
     }, 500);
 
@@ -66,22 +76,24 @@ const WidgetShowcase = () => {
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 max-w-6xl mx-auto">
           {widgets.map((widget, index) => (
-            <div
-              key={widget}
-              className={`widget-button feature-blur p-4 rounded-2xl text-center transition-all duration-300 ${
-                visibleWidgets.includes(index) ? 'animate-dropIn' : 'opacity-0'
+            <DraggableButton
+              key={widget.name}
+              className={`widget-button feature-blur p-4 text-center transition-all duration-300 ${
+                visibleWidgets.includes(index) 
+                  ? index % 2 === 0 
+                    ? 'animate-slideLeftToRight' 
+                    : 'animate-slideRightToLeft'
+                  : 'opacity-0'
               }`}
               style={{ animationDelay: `${index * 0.1}s` }}
-              onMouseMove={(e) => handleMouseMove(e, index)}
-              onMouseLeave={handleMouseLeave}
             >
-              <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-3 text-white font-bold text-lg">
-                {widget.charAt(0)}
+              <div className="text-3xl mb-2">
+                {widget.icon}
               </div>
-              <h3 className="font-semibold text-gray-800 text-sm leading-tight">
-                {widget}
+              <h3 className="font-semibold text-gray-800 text-xs leading-tight">
+                {widget.name}
               </h3>
-            </div>
+            </DraggableButton>
           ))}
         </div>
 
