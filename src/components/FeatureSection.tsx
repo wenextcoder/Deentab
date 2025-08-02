@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import DraggableButton from './DraggableButton';
 
 interface FeatureSectionProps {
   title: string;
@@ -85,10 +86,10 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
                 ))}
               </div>
             
-              <button className="group bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center space-x-2">
+              <DraggableButton className="group text-white px-6 py-3 font-semibold flex items-center space-x-2">
                 <span>Explore This Feature</span>
                 <div className="w-5 h-5 group-hover:translate-x-1 transition-transform">→</div>
-              </button>
+              </DraggableButton>
             </div>
           </div>
           

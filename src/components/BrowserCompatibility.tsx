@@ -1,5 +1,6 @@
 import React from 'react';
 import { Chrome, Globe, Smartphone, Monitor, Download } from 'lucide-react';
+import DraggableButton from './DraggableButton';
 
 const BrowserCompatibility = () => {
   return (
@@ -54,10 +55,10 @@ const BrowserCompatibility = () => {
                 <span>Syncs across devices</span>
               </div>
             </div>
-            <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-full font-semibold transition-colors flex items-center space-x-2 mx-auto">
+            <DraggableButton className="text-white px-6 py-3 font-semibold flex items-center space-x-2 mx-auto">
               <Download className="w-4 h-4" />
               <span>Add to Chrome</span>
-            </button>
+            </DraggableButton>
           </div>
 
           {/* Web Application */}
@@ -84,10 +85,10 @@ const BrowserCompatibility = () => {
                 <span>Always up to date</span>
               </div>
             </div>
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-semibold transition-colors flex items-center space-x-2 mx-auto">
+            <DraggableButton className="text-white px-6 py-3 font-semibold flex items-center space-x-2 mx-auto">
               <Globe className="w-4 h-4" />
               <span>Open Web App</span>
-            </button>
+            </DraggableButton>
           </div>
         </div>
 

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import DraggableButton from './DraggableButton';
 
 const widgets = [
   'Todo List', 'Digital Clock', 'Prayer Times', 'Greeting',
@@ -85,9 +86,9 @@ const WidgetShowcase = () => {
         </div>
 
         <div className="text-center mt-12">
-          <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+          <DraggableButton className="text-white px-8 py-4 font-semibold text-lg shadow-lg">
             Explore All Widgets
-          </button>
+          </DraggableButton>
         </div>
       </div>
     </section>

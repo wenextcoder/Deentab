@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import DraggableButton from './DraggableButton';
 
 const sections = [
   { id: 'hero', label: 'Home' },
@@ -42,13 +43,13 @@ const StickyNavigation = () => {
 
   return (
     <nav className="fixed right-8 top-1/2 transform -translate-y-1/2 z-50 hidden lg:block">
-      <div className="bg-white/90 backdrop-blur-lg rounded-full shadow-lg border border-gray-200 p-4">
+      <div className="glass-button p-4">
         <div className="space-y-3">
           {sections.map((section) => (
-            <button
+            <DraggableButton
               key={section.id}
               onClick={() => scrollToSection(section.id)}
-              className={`block w-3 h-3 rounded-full transition-all duration-300 ${
+              className={`block w-3 h-3 rounded-full ${
                 activeSection === section.id
                   ? 'bg-emerald-600 scale-125'
                   : 'bg-gray-300 hover:bg-emerald-400'

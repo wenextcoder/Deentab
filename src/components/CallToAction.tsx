@@ -1,5 +1,6 @@
 import React from 'react';
 import { Download, Chrome, Globe } from 'lucide-react';
+import DraggableButton from './DraggableButton';
 
 const CallToAction = () => {
   return (
@@ -30,31 +31,31 @@ const CallToAction = () => {
               <Chrome className="w-12 h-12 text-emerald-200 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">Browser Extension</h3>
               <p className="text-emerald-100 mb-4">Replace your new tab with DeenTab</p>
-              <button className="bg-white text-emerald-700 px-6 py-3 rounded-full font-semibold hover:bg-emerald-50 transition-colors flex items-center space-x-2 mx-auto">
+              <DraggableButton className="bg-white text-emerald-700 px-6 py-3 font-semibold hover:bg-emerald-50 flex items-center space-x-2 mx-auto">
                 <Download className="w-4 h-4" />
                 <span>Add to Chrome</span>
-              </button>
+              </DraggableButton>
             </div>
             
             <div className="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20">
               <Globe className="w-12 h-12 text-emerald-200 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">Web Application</h3>
               <p className="text-emerald-100 mb-4">Access DeenTab from any browser</p>
-              <button className="bg-white text-emerald-700 px-6 py-3 rounded-full font-semibold hover:bg-emerald-50 transition-colors flex items-center space-x-2 mx-auto">
+              <DraggableButton className="bg-white text-emerald-700 px-6 py-3 font-semibold hover:bg-emerald-50 flex items-center space-x-2 mx-auto">
                 <Globe className="w-4 h-4" />
                 <span>Open Web App</span>
-              </button>
+              </DraggableButton>
             </div>
           </div>
           
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-            <button className="bg-white text-emerald-700 px-8 py-4 rounded-full font-bold text-lg hover:bg-emerald-50 transition-colors shadow-lg">
+            <DraggableButton className="bg-white text-emerald-700 px-8 py-4 font-bold text-lg hover:bg-emerald-50 shadow-lg">
               Start Free Trial
-            </button>
+            </DraggableButton>
             
-            <button className="text-white border border-white/30 px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-colors">
+            <DraggableButton className="text-white border border-white/30 px-8 py-4 font-semibold hover:bg-white/10">
               Learn More
-            </button>
+            </DraggableButton>
           </div>
           
           <div className="mt-12 flex items-center justify-center space-x-8 text-emerald-200">

@@ -1,5 +1,6 @@
 import React from 'react';
 import { ChevronRight, Play } from 'lucide-react';
+import DraggableButton from './DraggableButton';
 
 const Hero = () => {
   return (
@@ -57,17 +58,17 @@ const Hero = () => {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12">
-            <button className="group bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center space-x-2">
+            <DraggableButton className="group text-white px-8 py-4 font-semibold text-lg flex items-center space-x-2">
               <span>Experience DeenTab Now</span>
               <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
+            </DraggableButton>
             
-            <button className="group flex items-center space-x-2 text-gray-700 hover:text-emerald-600 font-semibold text-lg transition-colors">
-              <div className="w-12 h-12 liquid-blur shadow-lg rounded-full flex items-center justify-center group-hover:shadow-xl transition-shadow">
+            <DraggableButton className="group flex items-center space-x-2 text-gray-700 hover:text-emerald-600 font-semibold text-lg">
+              <div className="w-12 h-12 glass-button shadow-lg rounded-full flex items-center justify-center group-hover:shadow-xl transition-shadow">
                 <Play className="w-5 h-5 ml-1" />
               </div>
               <span>Watch Demo</span>
-            </button>
+            </DraggableButton>
           </div>
           
           {/* App Preview */}
@@ -83,10 +84,10 @@ const Hero = () => {
             </div>
             
             {/* Floating Elements */}
-            <div className="absolute -top-4 -left-4 liquid-blur text-emerald-700 px-4 py-2 rounded-full text-sm font-medium animate-bounce">
+            <div className="absolute -top-4 -left-4 glass-button text-emerald-700 px-4 py-2 text-sm font-medium animate-bounce">
               ✨ Customizable
             </div>
-            <div className="absolute -bottom-4 -right-4 liquid-blur text-blue-700 px-4 py-2 rounded-full text-sm font-medium animate-bounce delay-300">
+            <div className="absolute -bottom-4 -right-4 glass-button text-blue-700 px-4 py-2 text-sm font-medium animate-bounce delay-300">
               🎵 Peaceful Audio
             </div>
           </div>

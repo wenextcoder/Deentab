@@ -108,6 +108,43 @@ html {
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
+/* Enhanced Glassmorphism Button Effect */
+.glass-button {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(30px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+}
+
+.glass-button:hover {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(35px) saturate(200%);
+  transform: translateY(-2px);
+  box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.glass-button:active {
+  transform: translateY(0px);
+  box-shadow: 0 15px 30px -12px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Dragging states */
+.glass-button.dragging {
+  z-index: 1000;
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 40px 80px -12px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(40px) saturate(220%);
+}
+
+.glass-button.returning {
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
 /* Enhanced blur for feature sections */
 .feature-blur {
   background: rgba(255, 255, 255, 0.7);
