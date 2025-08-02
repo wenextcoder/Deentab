@@ -86,7 +86,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
                 ))}
               </div>
             
-              <DraggableButton className="group text-white px-6 py-3 font-semibold flex items-center space-x-2">
+              <DraggableButton className="group px-6 py-3 font-semibold flex items-center space-x-2">
                 <span>Explore This Feature</span>
                 <div className="w-5 h-5 group-hover:translate-x-1 transition-transform">→</div>
               </DraggableButton>

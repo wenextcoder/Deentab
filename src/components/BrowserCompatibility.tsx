@@ -55,7 +55,7 @@ const BrowserCompatibility = () => {
                 <span>Syncs across devices</span>
               </div>
             </div>
-            <DraggableButton className="text-white px-6 py-3 font-semibold flex items-center space-x-2 mx-auto">
+            <DraggableButton className="px-6 py-3 font-semibold flex items-center space-x-2 mx-auto">
               <Download className="w-4 h-4" />
               <span>Add to Chrome</span>
             </DraggableButton>
@@ -85,7 +85,7 @@ const BrowserCompatibility = () => {
                 <span>Always up to date</span>
               </div>
             </div>
-            <DraggableButton className="text-white px-6 py-3 font-semibold flex items-center space-x-2 mx-auto">
+            <DraggableButton className="px-6 py-3 font-semibold flex items-center space-x-2 mx-auto">
               <Globe className="w-4 h-4" />
               <span>Open Web App</span>
             </DraggableButton>

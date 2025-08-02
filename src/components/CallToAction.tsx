@@ -31,7 +31,7 @@ const CallToAction = () => {
               <Chrome className="w-12 h-12 text-emerald-200 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">Browser Extension</h3>
               <p className="text-emerald-100 mb-4">Replace your new tab with DeenTab</p>
-              <DraggableButton className="bg-white text-emerald-700 px-6 py-3 font-semibold hover:bg-emerald-50 flex items-center space-x-2 mx-auto">
+              <DraggableButton className="px-6 py-3 font-semibold flex items-center space-x-2 mx-auto">
                 <Download className="w-4 h-4" />
                 <span>Add to Chrome</span>
               </DraggableButton>
@@ -41,7 +41,7 @@ const CallToAction = () => {
               <Globe className="w-12 h-12 text-emerald-200 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">Web Application</h3>
               <p className="text-emerald-100 mb-4">Access DeenTab from any browser</p>
-              <DraggableButton className="bg-white text-emerald-700 px-6 py-3 font-semibold hover:bg-emerald-50 flex items-center space-x-2 mx-auto">
+              <DraggableButton className="px-6 py-3 font-semibold flex items-center space-x-2 mx-auto">
                 <Globe className="w-4 h-4" />
                 <span>Open Web App</span>
               </DraggableButton>
@@ -49,11 +49,11 @@ const CallToAction = () => {
           </div>
           
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-            <DraggableButton className="bg-white text-emerald-700 px-8 py-4 font-bold text-lg hover:bg-emerald-50 shadow-lg">
+            <DraggableButton className="px-8 py-4 font-bold text-lg shadow-lg">
               Start Free Trial
             </DraggableButton>
             
-            <DraggableButton className="text-white border border-white/30 px-8 py-4 font-semibold hover:bg-white/10">
+            <DraggableButton className="border border-white/30 px-8 py-4 font-semibold">
               Learn More
             </DraggableButton>
           </div>

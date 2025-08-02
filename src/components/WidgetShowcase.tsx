@@ -86,7 +86,7 @@ const WidgetShowcase = () => {
         </div>
 
         <div className="text-center mt-12">
-          <DraggableButton className="text-white px-8 py-4 font-semibold text-lg shadow-lg">
+          <DraggableButton className="px-8 py-4 font-semibold text-lg shadow-lg">
             Explore All Widgets
           </DraggableButton>
         </div>

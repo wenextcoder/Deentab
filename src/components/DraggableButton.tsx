@@ -40,8 +40,8 @@ const DraggableButton: React.FC<DraggableButtonProps> = ({
           setPosition({ x: 0, y: 0 });
           setTimeout(() => {
             setIsReturning(false);
-          }, 500);
-        }, 100);
+          }, 300);
+        }, 50);
       }
     };
 
